@@ -1,11 +1,13 @@
-word = ('kajak')
-def palindrome(word):
-  """prints information if a given word is a palindrome"""
-  for letter in word:
-    n = int(len(word))
-    if n>2:
-      for i in range (0,n):
-        letter[0] == letter[-1]
-        i=i+1
-  print(f'{word} is a palindrome')
-palindrome(word)
+def is_palindrome(s):
+  """prints information if a given string is a palindrome"""
+  s = "".join(s.split()).lower()
+  n= len(s)
+  if (n <= 1): 
+     print(True)
+  for i in range (2,n-1):
+      if s[0] == s[-1]: 
+        return True
+      else:
+         return False
+
+is_palindrome("Kobyła ma mały bok")
